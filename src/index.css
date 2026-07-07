@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    color-scheme: dark;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: rgba(56, 189, 248, 0.24);
+    color: #ffffff;
+}
+
+#root {
+    isolation: isolate;
+}
+
+.portfolio-shell {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.portfolio-shell::before,
+.portfolio-shell::after {
+    content: '';
+    position: absolute;
+    inset: auto;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: 0.2;
+    pointer-events: none;
+    animation: drift 12s ease-in-out infinite;
+}
+
+.portfolio-shell::before {
+    top: 8rem;
+    left: -4rem;
+    width: 18rem;
+    height: 18rem;
+    background: rgba(34, 211, 238, 0.35);
+}
+
+.portfolio-shell::after {
+    right: -4rem;
+    bottom: 6rem;
+    width: 20rem;
+    height: 20rem;
+    background: rgba(139, 92, 246, 0.35);
+    animation-delay: -4s;
+}
+
+.portfolio-card {
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(34, 211, 238, 0.4);
+    box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.15), 0 20px 60px rgba(2, 132, 199, 0.16);
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-drift {
+    animation: drift 8s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: glowPulse 3.2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out both;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes drift {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(18px, -24px, 0) scale(1.06);
+    }
+}
+
+@keyframes glowPulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.28);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(34, 211, 238, 0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
