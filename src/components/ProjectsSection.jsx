@@ -20,11 +20,19 @@ const ProjectsSection = ({ projects }) => (
           className="portfolio-card group animate-slide-up overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-glow"
           style={{ animationDelay: `${index * 90}ms` }}
         >
-          <div className="h-48 rounded-[1.6rem] bg-gradient-to-br from-cyan-500/15 via-transparent to-violet-500/10 p-4">
-            <div className="flex h-full items-end justify-between rounded-[1.4rem] bg-slate-900/90 p-4">
-              <div>
-                <p className="text-sm text-cyan-300">Project {index + 1}</p>
-                <h3 className="mt-2 text-xl font-semibold text-white">{project.name}</h3>
+          <div 
+            className="h-48 rounded-[1.6rem] overflow-hidden relative p-4 bg-gradient-to-br from-cyan-500/15 via-transparent to-violet-500/10"
+            style={project.image ? { backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'top' } : {}}
+          >
+            {project.image ? (
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+            ) : (
+              <div className="absolute inset-0 bg-slate-950/40" />
+            )}
+            <div className="flex h-full items-end relative z-10 w-full">
+              <div className="w-full bg-slate-950/80 p-3 rounded-2xl backdrop-blur-md border border-white/10">
+                <p className="text-xs text-cyan-300 font-medium">Project {index + 1}</p>
+                <h3 className="mt-1 text-base font-semibold text-white leading-tight">{project.name}</h3>
               </div>
             </div>
           </div>

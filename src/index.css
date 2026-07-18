@@ -1,14 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 :root {
     color-scheme: dark;
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -31,7 +30,6 @@ body {
 
 .portfolio-shell {
     position: relative;
-    overflow-x: hidden;
 }
 
 .portfolio-shell::before,

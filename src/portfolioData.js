@@ -1,4 +1,7 @@
+import esportsBg from './assets/esports-bg.png';
+
 export const resumeUrl = 'https://drive.google.com/file/d/17jk83nPbflYmqSNnF2ak1tn81g4KPN9Q/view?usp=sharing';
+
 
 export const navLinks = [
     { id: 'home', title: 'Home' },
@@ -45,16 +48,17 @@ export const skillProgress = [
 ];
 
 export const projects = [{
-        name: 'Social Media Application',
-        description: 'A modern social platform for sharing posts, connecting with peers, and managing communities with real-time interactions and secure authentication.',
+        name: 'Esports web application',
+        description: 'A professional BGMI esports tournament platform enabling players to register, track team rankings, sign up for daily match slots, and compete in structured gaming leagues.',
         tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
         highlights: [
-            'Built responsive user feeds, post creation, and comment threads.',
-            'Implemented secure authentication and profile management.',
-            'Designed API endpoints and database models for scalable social interactions.',
+            'Built tournament management workflows for daily slots and registrations.',
+            'Designed responsive rankings, leaderboard dashboards, and brackets.',
+            'Implemented secure user authentication and profile management.',
         ],
-        github: 'https://github.com/arunkatiyar/social-media-app',
-        demo: '#',
+        github: 'https://github.com/ark1826/rising-esports',
+        demo: 'https://www.risingesports.online/',
+        image: esportsBg,
     },
     {
         name: 'E-Commerce Platform',

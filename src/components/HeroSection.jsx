@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
+import profileImg from '../assets/profile.jpg';
 
 const socialIcons = {
   GitHub: FaGithub,
@@ -22,10 +23,10 @@ const HeroSection = ({ resumeUrl, socialLinks, contactInfo, scrollToSection }) =
         Arun Katiyar
       </h1>
       <p className="animate-slide-up mt-4 max-w-xl text-lg text-slate-300" style={{ animationDelay: '180ms' }}>
-        Building Scalable Full-Stack Applications and Solving Complex Problems Through Code.
+        MERN Stack Developer | Full Stack Engineer | Solving Real-World Problems with Clean & Scalable Code
       </p>
       <p className="animate-slide-up mt-6 text-slate-300" style={{ animationDelay: '240ms' }}>
-        I am a MERN Stack Developer with strong expertise in building real-world web applications, designing scalable backend systems, and solving complex algorithmic problems. I enjoy transforming ideas into efficient software solutions and continuously improving my engineering skills through hands-on development and Data Structures & Algorithms.
+        MERN Stack Developer passionate about building scalable web applications using MongoDB, Express.js, React, and Node.js. Experienced in authentication, REST APIs, Razorpay integration, real-time applications with Socket.io, and solving 250+ DSA problems.
       </p>
       <div className="animate-slide-up mt-8 flex flex-wrap gap-4" style={{ animationDelay: '300ms' }}>
         <button
@@ -70,11 +71,11 @@ const HeroSection = ({ resumeUrl, socialLinks, contactInfo, scrollToSection }) =
       <div className="relative overflow-hidden rounded-[1.75rem] border border-cyan-500/15 bg-slate-950/80 p-6">
         <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyan-400 via-sky-500 to-violet-500" />
         <div className="mb-6 flex items-center gap-4">
-          <div className="h-16 w-16 rounded-3xl bg-gradient-to-br from-cyan-400 to-violet-500 p-1">
-            <div className="h-full w-full rounded-3xl bg-slate-950" />
+          <div className="h-16 w-16 overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-400 to-violet-500 p-[2px]">
+            <img src={profileImg} alt="Arun Katiyar" className="h-full w-full rounded-[1.3rem] object-cover" />
           </div>
           <div>
-            <p className="text-sm uppercase tracking-[0.24em] text-cyan-300">Developer Brand</p>
+            <p className="text-sm uppercase tracking-[0.24em] text-cyan-300">Software Engineer</p>
             <p className="text-xl font-semibold text-white">Professional Profile</p>
           </div>
         </div>
